@@ -6,7 +6,9 @@ import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
+import java.util.Map;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
@@ -24,11 +26,17 @@ public class Main {
     }
 
     static void post() throws IOException {
-        final HttpPost httpPost = new HttpPost("https://example.com");
-        final String json = "{id: 1, name: James}";
-        final StringEntity entity = new StringEntity(json);
+        String url = "https://example.com";
+        Map<String, Object> params = new HashMap<>();
+        params.put("name", "Hello");
+        final String payload = new ObjectMapper().writeValueAsString(params);
+        String cookie = "";
+
+        final HttpPost httpPost = new HttpPost(url);
+        final StringEntity entity = new StringEntity(payload);
         httpPost.setEntity(entity);
         httpPost.setHeader("Accept", "application/json");
+        httpPost.setHeader("cookie", cookie);
 
         try (CloseableHttpClient client = HttpClients.custom()
                 .setSSLSocketFactory(new SSLConnectionSocketFactory(SSLContexts.custom()
@@ -48,3 +56,9 @@ public class Main {
         }
     }
 }
+
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.14.2</version>
+</dependency>
