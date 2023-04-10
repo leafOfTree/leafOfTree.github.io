@@ -1,10 +1,10 @@
-<svg width="78" height="46" viewBox="0 0 78 46" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="73" height="48" viewBox="0 0 73 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <rect x="2" y="1" width="59" height="34" fill="url(#pattern0)"/>
 <rect x="0.5" y="0.5" width="62" height="37" rx="3.5" stroke="#263959"/>
 <rect x="60" y="22" width="7" height="19" fill="white"/>
 <rect x="48" y="37" width="20" height="6" fill="white"/>
-<path d="M68 44V26" stroke="#263959" stroke-width="4" stroke-linecap="round"/>
-<line x1="60" y1="35" x2="76" y2="35" stroke="#263959" stroke-width="4" stroke-linecap="round"/>
+<path d="M63 46V28" stroke="#263959" stroke-width="4" stroke-linecap="round"/>
+<line x1="55" y1="37" x2="71" y2="37" stroke="#263959" stroke-width="4" stroke-linecap="round"/>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_1069_4" transform="matrix(0.0114074 0 0 0.0197952 -1.85754 -2.04173)"/>
